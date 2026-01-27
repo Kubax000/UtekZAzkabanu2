@@ -1,17 +1,28 @@
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Vezeni {
 
-    public Vezeni(){}
+    private Map<String, Mistnost> mistnosti = new HashMap<>();
+    private Mistnost startovniMistnost;
 
-    public void vytvorMistnosti(){}
-
-    public void propojMistnosti(){}
-
-    public Mistnost najdiMistnost(String nazev){
-        return null;
+    public Vezeni() {
     }
 
-    public Mistnost getStartovniMistnost(){
-        return null;
+    public void pridejMistnost(Mistnost mistnost) {
+        mistnosti.put(mistnost.getId(), mistnost);
     }
 
+    public Mistnost najdiMistnost(String id) {
+        return mistnosti.get(id);
+    }
+
+    public Mistnost getStartovniMistnost() {
+        return startovniMistnost;
+    }
+
+    public void setStartovniMistnost(Mistnost startovniMistnost) {
+        this.startovniMistnost = startovniMistnost;
+    }
 }

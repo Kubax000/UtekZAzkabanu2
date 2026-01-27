@@ -1,30 +1,44 @@
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Mistnost {
-    public Mistnost(String nazev,String popis){}
 
-    public String getNazev(){
-        return null;
+    private final String id;
+    private final String nazev;
+    private final String popis;
+    private Map<String, Mistnost> sousedniMistnosti = new HashMap<>();
+
+    public Mistnost(String id, String nazev, String popis) {
+        this.id = id;
+        this.nazev = nazev;
+        this.popis = popis;
     }
 
-    public String getPopis(){
-        return null;
+    public String getId() {
+        return id;
     }
 
-    public void pridejSousedniMistnost(Mistnost mistnost){}
-
-    public boolean jeDostupna(String nazevMistnosti){
-        return false;
+    public String getNazev() {
+        return nazev;
     }
 
-    public void pridejPredmet(Predmet predmet){}
-
-    public Predmet odeberPredmet(String nazev){
-        return null;
+    public String getPopis() {
+        return popis;
     }
 
-    public void pridejPostavu(Postava postava){}
-
-    public Postava najdiPostavu(String jmeno){
-        return null;
+    public void pridejSouseda(Mistnost mistnost) {
+        sousedniMistnosti.put(
+                mistnost.getNazev().toLowerCase(),
+                mistnost
+        );
     }
 
+    public Mistnost dejSouseda(String nazevMistnosti) {
+        return sousedniMistnosti.get(nazevMistnosti.toLowerCase());
+    }
+
+    public Map<String, Mistnost> getSousedniMistnosti() {
+        return Collections.unmodifiableMap(sousedniMistnosti);
+    }
 }

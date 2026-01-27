@@ -1,12 +1,22 @@
 public class Hrac {
 
-    public Hrac(Mistnost startovniMistnost){}
+    private Mistnost aktualniMistnost;
 
-    public Mistnost getAktualniMistnost(){
-        return null;
+    public Hrac(Mistnost startovniMistnost){
+        this.aktualniMistnost = startovniMistnost;
     }
 
-    public void presunSe(String nazevMistnosti){}
+    public Mistnost getAktualniMistnost(){
+        return aktualniMistnost;
+    }
+
+    public void pohniSe(String nazevMistnosti){
+        Mistnost cil = aktualniMistnost.dejSouseda(nazevMistnosti);
+
+        if (cil != null){
+            aktualniMistnost = cil;
+        }
+    }
 
     public Inventar getInventar(){
         return null;

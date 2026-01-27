@@ -1,0 +1,74 @@
+{
+  "start": "cela",
+  "mistnosti": [
+    {
+      "id": "cela",
+      "nazev": "Cela vězně",
+      "popis": "Studená kamenná cela, ve které se probouzíš uprostřed noci.",
+      "vychody": {
+        "chodba cel": "chodba_cel"
+      }
+    },
+    {
+      "id": "chodba_cel",
+      "nazev": "Chodba cel",
+      "popis": "Dlouhá chodba spojující jednotlivé cely vězňů.",
+      "vychody": {
+        "cela vězně": "cela",
+        "kuchyně vězňů": "kuchyne",
+        "knihovna kouzel": "knihovna",
+        "strážní místnost": "strazni_mistnost"
+      }
+    },
+    {
+      "id": "kuchyne",
+      "nazev": "Kuchyně vězňů",
+      "popis": "Špinavá kuchyně s několika hrnci a zbytky jídla.",
+      "vychody": {
+        "chodba cel": "chodba_cel"
+      }
+    },
+    {
+      "id": "knihovna",
+      "nazev": "Knihovna kouzel",
+      "popis": "Zaprášená místnost plná starých kouzelnických svitků.",
+      "vychody": {
+        "chodba cel": "chodba_cel",
+        "magická laboratoř": "magicka_laborator"
+      }
+    },
+    {
+      "id": "magicka_laborator",
+      "nazev": "Magická laboratoř",
+      "popis": "Místnost s narušenými runami a zbytky magického systému.",
+      "vychody": {
+        "knihovna kouzel": "knihovna",
+        "sklad předmětů": "sklad"
+      }
+    },
+    {
+      "id": "sklad",
+      "nazev": "Sklad zabavených předmětů",
+      "popis": "Místnost plná zabavených nástrojů a magických artefaktů.",
+      "vychody": {
+        "magická laboratoř": "magicka_laborator"
+      }
+    },
+    {
+      "id": "strazni_mistnost",
+      "nazev": "Strážní místnost",
+      "popis": "Místnost, kde hlídá stráž Azkabanu.",
+      "vychody": {
+        "chodba cel": "chodba_cel",
+        "hlavní brána": "hlavni_brana"
+      }
+    },
+    {
+      "id": "hlavni_brana",
+      "nazev": "Hlavní brána Azkabanu",
+      "popis": "Masivní brána představující jedinou cestu ke svobodě.",
+      "vychody": {
+      }
+    }
+  ]
+}
