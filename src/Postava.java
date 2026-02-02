@@ -1,11 +1,25 @@
 public class Postava {
 
-    public Postava(String jmeno,String popis){}
+    private final String jmeno;
+    private final String popis;
+    private final String dialog;
 
-    public String getJmeno(){
-        return null;
+    public Postava(String jmeno,String popis,String dialog){
+        this.jmeno=jmeno;
+        this.popis=popis;
+        this.dialog=dialog;
     }
 
-    public void mluv(Hra hra){}
+    public String getJmeno(){
+        return jmeno;
+    }
+
+    public String getPopis(){
+        return popis;
+    }
+
+    public void mluv(Hra hra){
+        System.out.println(jmeno + ":" + dialog);
+    }
 
 }

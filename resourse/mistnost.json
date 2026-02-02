@@ -7,7 +7,11 @@
       "popis": "Studená kamenná cela, ve které se probouzíš uprostřed noci.",
       "vychody": {
         "chodba cel": "chodba_cel"
-      }
+      },
+      "predmety": [
+        { "nazev": "Stary kus latky", "popis": "Roztrhana latka, muze se hodit.", "prenosny": true }
+      ],
+      "postavy": []
     },
     {
       "id": "chodba_cel",
@@ -18,7 +22,11 @@
         "kuchyně vězňů": "kuchyne",
         "knihovna kouzel": "knihovna",
         "strážní místnost": "strazni_mistnost"
-      }
+      },
+      "predmety": [],
+      "postavy": [
+        { "jmeno": "Stary vezen", "popis": "Vycerpany muz v roztrhanych satech.", "dialog": "Psst... ve skladu je pry pacidlo." }
+      ]
     },
     {
       "id": "kuchyne",
@@ -26,7 +34,13 @@
       "popis": "Špinavá kuchyně s několika hrnci a zbytky jídla.",
       "vychody": {
         "chodba cel": "chodba_cel"
-      }
+      },
+      "predmety": [
+        { "nazev": "Chleba", "popis": "Tvrdy chleba. Nekdo ho bude chtit.", "prenosny": true }
+      ],
+      "postavy": [
+        { "jmeno": "Zradny vezen", "popis": "Tvari se kamaradsky, ale never mu.", "dialog": "Kdyz mi dones chleba, neco ti reknu..." }
+      ]
     },
     {
       "id": "knihovna",
@@ -35,7 +49,13 @@
       "vychody": {
         "chodba cel": "chodba_cel",
         "magická laboratoř": "magicka_laborator"
-      }
+      },
+      "predmety": [
+        { "nazev": "Svitok", "popis": "Stary svitek s kouzelnymi runami.", "prenosny": true }
+      ],
+      "postavy": [
+        { "jmeno": "Spravce magie", "popis": "Podezrely spravce, hlida svitky.", "dialog": "Bez svitku nic neotevres." }
+      ]
     },
     {
       "id": "magicka_laborator",
@@ -44,7 +64,11 @@
       "vychody": {
         "knihovna kouzel": "knihovna",
         "sklad předmětů": "sklad"
-      }
+      },
+      "predmety": [
+        { "nazev": "Magicky krystal", "popis": "Zari, kdyz je blizko magie.", "prenosny": true }
+      ],
+      "postavy": []
     },
     {
       "id": "sklad",
@@ -52,7 +76,12 @@
       "popis": "Místnost plná zabavených nástrojů a magických artefaktů.",
       "vychody": {
         "magická laboratoř": "magicka_laborator"
-      }
+      },
+      "predmety": [
+        { "nazev": "Pacidlo", "popis": "Hodi se na vypaceni nebo odemceni.", "prenosny": true },
+        { "nazev": "Rezavy klic", "popis": "Stary klic. Mozna pasuje na branu.", "prenosny": true }
+      ],
+      "postavy": []
     },
     {
       "id": "strazni_mistnost",
@@ -61,14 +90,21 @@
       "vychody": {
         "chodba cel": "chodba_cel",
         "hlavní brána": "hlavni_brana"
-      }
+      },
+      "predmety": [],
+      "postavy": [
+        { "jmeno": "Straz", "popis": "Prisna straz Azkabanu.", "dialog": "Zpatky do cely!" }
+      ]
     },
     {
       "id": "hlavni_brana",
       "nazev": "Hlavní brána Azkabanu",
       "popis": "Masivní brána představující jedinou cestu ke svobodě.",
-      "vychody": {
-      }
+      "vychody": {},
+      "predmety": [
+        { "nazev": "Hlavni pecet", "popis": "Pecet, kterou je nutne ziskat pro utek.", "prenosny": false }
+      ],
+      "postavy": []
     }
   ]
 }

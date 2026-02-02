@@ -1,21 +1,47 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Inventar {
 
+    private final int kapacita;
+    private final Map<String, Predmet>veci = new LinkedHashMap<>();
+
     public  Inventar(int kapacita){
+        this.kapacita = kapacita;
     }
 
     public boolean pridejPredmet(Predmet predmet){
-        return false;
+        if (predmet == null){
+            return false;
+        }
+        if (veci.size() >= kapacita){
+            return false;
+        }
+        veci.put(predmet.getNazev().toLowerCase(), predmet);
+        return true;
     }
 
     public Predmet odeberPredmet(String nazev){
-        return null;
+        return veci.remove(nazev.toLowerCase());
     }
 
     public boolean obsahujePredmet(String nazev){
-        return false;
+        return veci.containsKey(nazev.toLowerCase());
+    }
+
+    public Predmet najdiPredmet(String nazev){
+        return veci.get(nazev.toLowerCase());
     }
 
     public void vypisInventar(){
+        if (veci.isEmpty()) {
+            System.out.println("Inventar je prazdny.");
+            return;
+        }
+        System.out.println("Inventar:");
+        for (Predmet p : veci.values()) {
+            System.out.println("- " + p.getNazev());
+        }
     }
 
 }

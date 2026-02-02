@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Map;
 
 public class NastaveniMistnosti {
@@ -5,6 +6,8 @@ public class NastaveniMistnosti {
     private String nazev;
     private String popis;
     private Map<String, String> vychody;
+    private List<NastaveniPredmetu> predmety;
+    private List<NastaveniPostavy> postavy;
 
     public NastaveniMistnosti() {}
 
@@ -37,5 +40,19 @@ public class NastaveniMistnosti {
 
     public void setVychody(Map<String, String> vychody) {
         this.vychody = vychody;
+    }
+
+    public List<NastaveniPredmetu> getPredmety() {
+        return predmety;
+    }
+    public void setPredmety(List<NastaveniPredmetu> predmety) {
+        this.predmety = predmety;
+    }
+
+    public List<NastaveniPostavy> getPostavy() {
+        return postavy;
+    }
+    public void setPostavy(List<NastaveniPostavy> postavy) {
+        this.postavy = postavy;
     }
 }

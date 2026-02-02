@@ -30,6 +30,22 @@ public class NacitacVezeni {
 
         vezeni.setStartovniMistnost(vezeni.najdiMistnost(cfg.getStart()));
 
+        for (NastaveniMistnosti nm : cfg.getMistnosti()) {
+            Mistnost m = vezeni.najdiMistnost(nm.getId());
+
+            if (nm.getPredmety() != null) {
+                for (NastaveniPredmetu np : nm.getPredmety()) {
+                    m.pridejPredmet(new Predmet(np.getNazev(), np.getPopis(), np.isPrenosny()));
+                }
+            }
+
+            if (nm.getPostavy() != null) {
+                for (NastaveniPostavy np : nm.getPostavy()) {
+                    m.pridejPostavu(new Postava(np.getJmeno(), np.getPopis(), np.getDialog()));
+                }
+            }
+        }
+
         return vezeni;
     }
 }
