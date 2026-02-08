@@ -6,8 +6,10 @@ public class Prikazy {
 
     private final Map<String, Prikaz> registry = new HashMap<>();
 
-    public Prikazy(){}
-
+    /**
+     * zaregistruje prikaz do mapy
+     * @param prikaz
+     */
     public void zaregistruj(Prikaz prikaz){
         registry.put(prikaz.getNazev().toLowerCase(), prikaz);
     }
@@ -22,8 +24,7 @@ public class Prikazy {
         }
 
         String[] casti = vstup.split("\\s+", 2);
-        String nazev = casti[0].toLowerCase();
-        return registry.get(nazev);
+        return registry.get(casti[0].toLowerCase());
     }
 
     public String parametr(String vstup){
@@ -43,7 +44,6 @@ public class Prikazy {
         for (Prikaz p : registry.values()) {
             System.out.println("- " + p.getNazev() + " : " + p.getPopis());
         }
-        System.out.println("Pohyb: pouzivej prikaz 'jdi <nazev mistnosti>'");
     }
 
 }

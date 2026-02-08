@@ -17,20 +17,20 @@ public class Inventar {
         if (veci.size() >= kapacita){
             return false;
         }
-        veci.put(predmet.getNazev().toLowerCase(), predmet);
+        veci.put(predmet.getNazev().toLowerCase().trim(), predmet);
         return true;
     }
 
     public Predmet odeberPredmet(String nazev){
-        return veci.remove(nazev.toLowerCase());
+        return veci.remove(nazev.toLowerCase().trim());
     }
 
     public boolean obsahujePredmet(String nazev){
-        return veci.containsKey(nazev.toLowerCase());
+        return veci.containsKey(nazev.toLowerCase().trim());
     }
 
     public Predmet najdiPredmet(String nazev){
-        return veci.get(nazev.toLowerCase());
+        return veci.get(nazev.toLowerCase().trim());
     }
 
     public void vypisInventar(){

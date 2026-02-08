@@ -1,11 +1,14 @@
 public class StavHry {
-
-    public StavHry(){}
+    private boolean vyhra = false;
 
     public boolean jeVyhra(){
-        return false;
+        return vyhra;
     }
 
-    public void nastavVyhru(){}
+    public void nastavVyhru(){
+        vyhra = true;
+    }
+
+
 
 }

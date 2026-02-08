@@ -40,12 +40,13 @@ public class NacitacVezeni {
             }
 
             if (nm.getPostavy() != null) {
-                for (NastaveniPostavy np : nm.getPostavy()) {
-                    m.pridejPostavu(new Postava(np.getJmeno(), np.getPopis(), np.getDialog()));
+                for (NastaveniPostavy npo : nm.getPostavy()) {
+                    m.pridejPostavu(new Postava(npo.getJmeno(), npo.getPopis(), npo.getDialog()));
                 }
             }
         }
 
+        vezeni.setStartovniMistnost(vezeni.najdiMistnost(cfg.getStart()));
         return vezeni;
     }
 }

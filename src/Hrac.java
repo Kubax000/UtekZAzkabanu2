@@ -1,11 +1,10 @@
 public class Hrac {
 
     private Mistnost aktualniMistnost;
-    private final Inventar inventar;
+    private final Inventar inventar = new Inventar(3);
 
     public Hrac(Mistnost startovniMistnost){
         this.aktualniMistnost = startovniMistnost;
-        this.inventar = new Inventar(3);
     }
 
     public Mistnost getAktualniMistnost(){

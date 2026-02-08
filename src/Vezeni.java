@@ -1,4 +1,3 @@
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -6,9 +5,6 @@ public class Vezeni {
 
     private Map<String, Mistnost> mistnosti = new HashMap<>();
     private Mistnost startovniMistnost;
-
-    public Vezeni() {
-    }
 
     public void pridejMistnost(Mistnost mistnost) {
         mistnosti.put(mistnost.getId(), mistnost);

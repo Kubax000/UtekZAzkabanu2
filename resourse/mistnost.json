@@ -3,8 +3,8 @@
   "mistnosti": [
     {
       "id": "cela",
-      "nazev": "Cela vězně",
-      "popis": "Studená kamenná cela, ve které se probouzíš uprostřed noci.",
+      "nazev": "Cela vezne",
+      "popis": "Studena kamenna cela, ve ktere se probouzis uprostred noci.",
       "vychody": {
         "chodba cel": "chodba_cel"
       },
@@ -16,12 +16,12 @@
     {
       "id": "chodba_cel",
       "nazev": "Chodba cel",
-      "popis": "Dlouhá chodba spojující jednotlivé cely vězňů.",
+      "popis": "Dlouha chodba spojujici jednotlive cely veznu.",
       "vychody": {
-        "cela vězně": "cela",
-        "kuchyně vězňů": "kuchyne",
+        "cela vezne": "cela",
+        "kuchyne veznu": "kuchyne",
         "knihovna kouzel": "knihovna",
-        "strážní místnost": "strazni_mistnost"
+        "strazni mistnost": "strazni_mistnost"
       },
       "predmety": [],
       "postavy": [
@@ -30,8 +30,8 @@
     },
     {
       "id": "kuchyne",
-      "nazev": "Kuchyně vězňů",
-      "popis": "Špinavá kuchyně s několika hrnci a zbytky jídla.",
+      "nazev": "Kuchyne veznu",
+      "popis": "Spinava kuchyne s nekolika hrnci a zbytky jidla.",
       "vychody": {
         "chodba cel": "chodba_cel"
       },
@@ -45,10 +45,10 @@
     {
       "id": "knihovna",
       "nazev": "Knihovna kouzel",
-      "popis": "Zaprášená místnost plná starých kouzelnických svitků.",
+      "popis": "Zaprasena mistnost plna starych kouzelnickych svitku.",
       "vychody": {
         "chodba cel": "chodba_cel",
-        "magická laboratoř": "magicka_laborator"
+        "magicka laborator": "magicka_laborator"
       },
       "predmety": [
         { "nazev": "Svitok", "popis": "Stary svitek s kouzelnymi runami.", "prenosny": true }
@@ -59,11 +59,11 @@
     },
     {
       "id": "magicka_laborator",
-      "nazev": "Magická laboratoř",
-      "popis": "Místnost s narušenými runami a zbytky magického systému.",
+      "nazev": "Magicka laborator",
+      "popis": "Mistnost s narusenymi runami a zbytky magickeho systemu.",
       "vychody": {
         "knihovna kouzel": "knihovna",
-        "sklad předmětů": "sklad"
+        "sklad predmetu": "sklad"
       },
       "predmety": [
         { "nazev": "Magicky krystal", "popis": "Zari, kdyz je blizko magie.", "prenosny": true }
@@ -72,10 +72,10 @@
     },
     {
       "id": "sklad",
-      "nazev": "Sklad zabavených předmětů",
-      "popis": "Místnost plná zabavených nástrojů a magických artefaktů.",
+      "nazev": "Sklad zabavenych predmetu",
+      "popis": "Mistnost plna zabavenych nastroju a magickych artefaktu.",
       "vychody": {
-        "magická laboratoř": "magicka_laborator"
+        "magicka laborator": "magicka_laborator"
       },
       "predmety": [
         { "nazev": "Pacidlo", "popis": "Hodi se na vypaceni nebo odemceni.", "prenosny": true },
@@ -85,11 +85,11 @@
     },
     {
       "id": "strazni_mistnost",
-      "nazev": "Strážní místnost",
-      "popis": "Místnost, kde hlídá stráž Azkabanu.",
+      "nazev": "Strazni mistnost",
+      "popis": "Mistnost, kde hlida straz Azkabanu.",
       "vychody": {
         "chodba cel": "chodba_cel",
-        "hlavní brána": "hlavni_brana"
+        "hlavni brana": "hlavni_brana"
       },
       "predmety": [],
       "postavy": [
@@ -98,8 +98,8 @@
     },
     {
       "id": "hlavni_brana",
-      "nazev": "Hlavní brána Azkabanu",
-      "popis": "Masivní brána představující jedinou cestu ke svobodě.",
+      "nazev": "Hlavni brana Azkabanu",
+      "popis": "Masivni brana predstavujici jedinou cestu ke svobode.",
       "vychody": {},
       "predmety": [
         { "nazev": "Hlavni pecet", "popis": "Pecet, kterou je nutne ziskat pro utek.", "prenosny": false }
