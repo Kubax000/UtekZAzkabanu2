@@ -31,11 +31,11 @@ public class Mistnost {
     }
 
     public void pridejSouseda(Mistnost mistnost) {
-        sousedniMistnosti.put(mistnost.getNazev().toLowerCase(), mistnost);
+        sousedniMistnosti.put(mistnost.getNazev().toLowerCase().trim(), mistnost);
     }
 
     public Mistnost dejSouseda(String nazevMistnosti) {
-        return sousedniMistnosti.get(nazevMistnosti.toLowerCase());
+        return sousedniMistnosti.get(nazevMistnosti.toLowerCase().trim());
     }
 
     public Map<String, Mistnost> getSousedniMistnosti() {
@@ -43,15 +43,15 @@ public class Mistnost {
     }
 
     public void pridejPredmet(Predmet predmet) {
-        predmety.put(predmet.getNazev().toLowerCase(), predmet);
+        predmety.put(predmet.getNazev().toLowerCase().trim(), predmet);
     }
 
     public Predmet odeberPredmet(String nazev) {
-        return predmety.remove(nazev.toLowerCase());
+        return predmety.remove(nazev.toLowerCase().trim());
     }
 
     public Predmet najdiPredmet(String nazev) {
-        return predmety.get(nazev.toLowerCase());
+        return predmety.get(nazev.toLowerCase().trim());
     }
 
     public Collection<Predmet> getPredmety() {
@@ -59,11 +59,11 @@ public class Mistnost {
     }
 
     public void pridejPostavu(Postava postava) {
-        postavy.put(postava.getJmeno().toLowerCase(), postava);
+        postavy.put(postava.getJmeno().toLowerCase().trim(), postava);
     }
 
     public Postava najdiPostavu(String jmeno) {
-        return postavy.get(jmeno.toLowerCase());
+        return postavy.get(jmeno.toLowerCase().trim());
     }
 
     public Collection<Postava> getPostavy() {
