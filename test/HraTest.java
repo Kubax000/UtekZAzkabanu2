@@ -39,6 +39,7 @@ public class HraTest {
         assertFalse(inv.pridejPredmet(new Predmet("B", "x", true)));
     }
 
+
     @Test
     void testPredmetVMistnostiPridatOdebrat() {
         Mistnost m = new Mistnost("m", "M", "x");
