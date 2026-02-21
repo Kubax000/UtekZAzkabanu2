@@ -1,6 +1,10 @@
 import java.nio.file.Path;
 import java.util.Scanner;
 
+/**
+ * Trida ridi cely prubeh hry.
+ * Zpracovava prikazy a kontroluje stav hry.
+ */
 public class Hra {
 
     private Vezeni vezeni;
@@ -12,7 +16,7 @@ public class Hra {
 
     /**
      * Spusti herni smycku, nacte vstup od uzivatele a spousti jednotlive prikazy
-     * @throws Exception pokud nastane chyba pri inicializaci
+     * @throws Exception pokud nastane chyba pri inicializaci hry
      */
     public void spustHru() throws Exception {
         vypisUvod();
@@ -24,13 +28,18 @@ public class Hra {
             System.out.print("\n> ");
             String vstup = scanner.nextLine();
             spustPrikazZeVstupu(vstup);
-            if(stav.jeVyhra()){
+            if (stav.jeVyhra()) {
                 System.out.println(" Vyhral jsi. Utekl jsi z Azkabanu. ");
                 bezi = false;
             }
         }
     }
 
+    /**
+     * Pripravi hru pre spustenim, nacte vezeni ze souboru,
+     * vytvori hrace a zaregistruje vsechny prikazy
+     * @throws Exception pokud selze nacteni ze JSON souboru
+     */
     private void inicializujHru() throws Exception {
         NacitacVezeni nacitac = new NacitacVezeni();
         vezeni = nacitac.nactiZJson(Path.of("resourse/mistnost.json"));
@@ -47,16 +56,24 @@ public class Hra {
         prikazy.zaregistruj(new PrikazKonec());
     }
 
+    /**
+     * Zpracuje text z konzole, najde prislusny prikaz a pokud existuje tak ho provede
+     * @param vstup retezec zadany uzivatelem
+     */
     public void spustPrikazZeVstupu(String vstup) {
         Prikaz p = prikazy.najdiPrikaz(vstup);
-        if(p == null){
-            System.out.println("Neznamy prikaz. Napis pomoc.");;
+        if (p == null) {
+            System.out.println("Neznamy prikaz. Napis pomoc.");
+            ;
         }
 
         String parametr = prikazy.parametr(vstup);
         p.vykonej(this, parametr);
     }
 
+    /**
+     * Vypise informace o aktualni mistnosti
+     */
     public void vypisMisto() {
         Mistnost m = hrac.getAktualniMistnost();
 
@@ -77,6 +94,9 @@ public class Hra {
         }
     }
 
+    /**
+     * Vypise uvod hry
+     */
     private void vypisUvod() {
         System.out.println("==================================");
         System.out.println(" UTEK Z AZKABANU - textova hra");
@@ -109,11 +129,17 @@ public class Hra {
         return prikazy;
     }
 
+    /**
+     * Ukonci hru
+     */
     public void ukonci() {
         bezi = false;
         System.out.println("Hra ukoncena.");
     }
 
+    /**
+     * Nastavi stav hry na vyhru
+     */
     public void nastavVyhru(){
         stav.nastavVyhru();
     }

@@ -2,7 +2,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Path;
 import java.util.Map;
 
+/**
+ * trida ktera se stara o nacteni mapy a objektu z JSON souboru
+ */
 public class NacitacVezeni {
+    /**
+     * Nacte a sestavi celou herni mapu
+     * @param cesta Cesta k JSON souboru na disku
+     * @return Kompletne sestaveny objekt vezeni
+     * @throws Exception Pokud se soubor nenacte
+     */
     public Vezeni nactiZJson(Path cesta) throws Exception {
 
         ObjectMapper mapper = new ObjectMapper();
