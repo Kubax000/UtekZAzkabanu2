@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu inventar.
+ * @author Jakub Eliasek
+ */
 public class PrikazInventar implements Prikaz {
 
     @Override

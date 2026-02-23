@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu prozkoumej.
+ * @author Jakub Eliasek
+ */
 public class PrikazProzkoumej implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

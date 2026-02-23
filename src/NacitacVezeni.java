@@ -11,6 +11,7 @@ public class NacitacVezeni {
      * @param cesta Cesta k JSON souboru na disku
      * @return Kompletne sestaveny objekt vezeni
      * @throws Exception Pokud se soubor nenacte
+     * @author Jakub Eliasek
      */
     public Vezeni nactiZJson(Path cesta) throws Exception {
 

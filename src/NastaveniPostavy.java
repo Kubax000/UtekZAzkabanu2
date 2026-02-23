@@ -1,3 +1,7 @@
+/**
+ * Definuje strukturu dat pro postavu v souboru JSON.
+ * @author Jakub Eliasek
+ */
 public class NastaveniPostavy {
     private String jmeno;
     private String popis;

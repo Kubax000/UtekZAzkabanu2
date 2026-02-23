@@ -4,6 +4,7 @@ import java.util.Map;
 /**
  * Trida slouzi jako registr vsech dostupnych prikazu ve hre
  * Umi zpracovat text zasany uzivatelem a rozdelit ho na prikaz a parametr
+ * @author Jakub Eliasek
  */
 public class Prikazy {
 

@@ -1,3 +1,7 @@
+/**
+ * Trida reprezentujici hrace, jeho polohu a inventar.
+ * @author Jakub Eliasek
+ */
 public class Hrac {
 
     private Mistnost aktualniMistnost;

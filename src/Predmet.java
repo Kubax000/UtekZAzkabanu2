@@ -1,3 +1,7 @@
+/**
+ * Reprezentuje predmet, ktery lze v mistnosti najit nebo sebrat.
+ * @author Jakub Eliasek
+ */
 public class Predmet {
 
     private final String nazev;

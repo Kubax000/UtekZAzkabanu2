@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu pouzij.
+ * @author Jakub Eliasek
+ */
 public class PrikazPouzij implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

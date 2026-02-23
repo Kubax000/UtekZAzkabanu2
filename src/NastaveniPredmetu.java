@@ -1,3 +1,7 @@
+/**
+ * Definuje strukturu dat pro predmet v souboru JSON.
+ * @author Jakub Eliasek
+ */
 public class NastaveniPredmetu {
     private String nazev;
     private String popis;

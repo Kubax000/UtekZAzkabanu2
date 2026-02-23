@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu vezmi.
+ * @author Jakub Eliasek
+ */
 public class PrikazVezmi implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

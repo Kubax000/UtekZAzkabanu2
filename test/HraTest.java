@@ -5,7 +5,14 @@ import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testy pro overeni hlavni logiky hry
+ *  @author Jakub Eliasek
+ */
 public class HraTest {
+    /**
+     * Testuje spravne propojeni mistnosti mezi sebou
+     */
     @Test
     void testMistnostSousedi() {
         Mistnost a = new Mistnost("a", "A", "x");
@@ -16,6 +23,9 @@ public class HraTest {
         assertNull(a.dejSouseda("Neexistuje"));
     }
 
+    /**
+     * Testuje to, aby se hrac mohl pohnout jen do vedlejsi ( sousedni ) mistnosti
+     */
     @Test
     void testHracPohybJenNaSouseda() {
         Mistnost cela = new Mistnost("cela", "Cela", "x");
@@ -31,6 +41,9 @@ public class HraTest {
         assertEquals("chodba", h.getAktualniMistnost().getId());
     }
 
+    /**
+     * Overuje omezenou kapacitu inventare
+     */
     @Test
     void testInventarKapacita() {
         Inventar inv = new Inventar(1);
@@ -39,7 +52,9 @@ public class HraTest {
         assertFalse(inv.pridejPredmet(new Predmet("B", "x", true)));
     }
 
-
+    /**
+     * Testuje, jestli je mozne v mistnosti vzit/polozit predmet
+     */
     @Test
     void testPredmetVMistnostiPridatOdebrat() {
         Mistnost m = new Mistnost("m", "M", "x");
@@ -52,6 +67,9 @@ public class HraTest {
         assertNull(m.najdiPredmet("Klic"));
     }
 
+    /**
+     * Overuje jestli spravne jsou oddelene vstupy a zkousi take prazdne vstupy
+     */
     @Test
     void testPrikazyParametr() {
         Prikazy p = new Prikazy();
@@ -61,8 +79,12 @@ public class HraTest {
         assertEquals("", p.parametr("   "));
     }
 
+    /**
+     * Testuje nacteni herniho sveta z JSON
+     * @throws Exception Pokud je chyba pri praci se souborem
+     */
     @Test
-    void testNacitacVezeniNacteniJsonMinimalni() throws Exception {
+    void testNacitacVezeniNacteniJson() throws Exception {
         String json = """
             {
               "start": "a",
@@ -84,6 +106,9 @@ public class HraTest {
         assertEquals("a", v.getStartovniMistnost().getId());
     }
 
+    /**
+     * Testuje vyhru hry. Diky FakeHra testuje ze hrac ma spravny klic a odemika branu.
+     */
     @Test
     void testVyhraPouzitimKliceNaBrane() {
         FakeHra hra = new FakeHra();
@@ -94,6 +119,9 @@ public class HraTest {
         assertTrue(hra.vyhraNastavena);
     }
 
+    /**
+     * Pomocna trida, slouzi pro ucely testovani a pomaha nam simulovat vytezstvi ve hre
+     */
     static class FakeHra extends Hra {
         boolean vyhraNastavena = false;
 

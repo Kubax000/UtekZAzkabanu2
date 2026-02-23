@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu pomoc.
+ * @author Jakub Eliasek
+ */
 public class PrikazPomoc implements Prikaz{
     @Override
     public void vykonej(Hra hra, String parametr) {

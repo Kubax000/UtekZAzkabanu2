@@ -1,5 +1,6 @@
 /**
  * Trida, ktera udrzuje info o tom, jestli je hra dohrana
+ * @author Jakub Eliasek
  */
 public class StavHry {
     private boolean vyhra = false;

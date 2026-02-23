@@ -2,8 +2,8 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 /**
- * Trida ridi cely prubeh hry.
- * Zpracovava prikazy a kontroluje stav hry.
+ * Hlavni ridici trida hry. Propojuje svet, hrace a prikazy.
+ * @author Jakub Eliasek
  */
 public class Hra {
 
@@ -42,7 +42,7 @@ public class Hra {
      */
     private void inicializujHru() throws Exception {
         NacitacVezeni nacitac = new NacitacVezeni();
-        vezeni = nacitac.nactiZJson(Path.of("resourse/mistnost.json"));
+        vezeni = nacitac.nactiZJson(Path.of("resources/mistnost.json"));
         hrac = new Hrac(vezeni.getStartovniMistnost());
 
         prikazy.zaregistruj(new PrikazJdi());
@@ -64,6 +64,7 @@ public class Hra {
         Prikaz p = prikazy.najdiPrikaz(vstup);
         if (p == null) {
             System.out.println("Neznamy prikaz. Napis pomoc.");
+            return;
         }
         String parametr = prikazy.parametr(vstup);
         p.vykonej(this, parametr);

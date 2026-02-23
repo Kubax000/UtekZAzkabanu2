@@ -1,6 +1,10 @@
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Pomocna trida, odpovida strukture mistnosti v souboru JSON
+ * @author Jakub Eliasek
+ */
 public class NastaveniMistnosti {
     private String id;
     private String nazev;

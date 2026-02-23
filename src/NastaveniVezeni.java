@@ -1,5 +1,9 @@
 import java.util.List;
 
+/**
+ * Definuje strukturu dat pro vezeni v souboru JSON.
+ * @author Jakub Eliasek
+ */
 public class NastaveniVezeni {
     private String start;
     private List<NastaveniMistnosti> mistnosti;

@@ -3,6 +3,7 @@ import java.util.Map;
 
 /**
  * Trida ktera reprezentuje hracuv inventar s omezenou kapacitou
+ * @author Jakub Eliasek
  */
 public class Inventar {
 

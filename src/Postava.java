@@ -1,3 +1,7 @@
+/**
+ * Trida reprezentujici postavu ve hre.
+ * @author Jakub Eliasek
+ */
 public class Postava {
 
     private final String jmeno;

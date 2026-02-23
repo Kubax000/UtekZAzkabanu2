@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu mluv.
+ * @author Jakub Eliasek
+ */
 public class PrikazMluv implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

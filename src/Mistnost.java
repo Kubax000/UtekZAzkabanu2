@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * Trida ktera reprezentuje jdnu mistnost ve vezeni.
  * Kazda mistnost vi o svych sousedech, predmetach a postavach, ktere v ni jsou.
+ * @author Jakub Eliasek
  */
 public class Mistnost {
 

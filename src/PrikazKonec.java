@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu konec.
+ * @author Jakub Eliasek
+ */
 public class PrikazKonec implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

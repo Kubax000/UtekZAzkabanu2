@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu poloz.
+ * @author Jakub Eliasek
+ */
 public class PrikazPoloz implements Prikaz {
     @Override
     public void vykonej(Hra hra, String parametr) {

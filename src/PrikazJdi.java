@@ -1,3 +1,7 @@
+/**
+ * Implementace prikazu jdi.
+ * @author Jakub Eliasek
+ */
 public class PrikazJdi implements Prikaz{
     @Override
     public void vykonej(Hra hra, String parametr) {

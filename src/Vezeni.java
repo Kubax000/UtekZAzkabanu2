@@ -1,6 +1,10 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Trida pro vsechny mistnosti ve hre. Reprezentuje herni svet.
+ * @author Jakub Eliasek
+ */
 public class Vezeni {
 
     private Map<String, Mistnost> mistnosti = new HashMap<>();
