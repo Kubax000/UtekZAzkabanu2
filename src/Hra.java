@@ -64,9 +64,7 @@ public class Hra {
         Prikaz p = prikazy.najdiPrikaz(vstup);
         if (p == null) {
             System.out.println("Neznamy prikaz. Napis pomoc.");
-            ;
         }
-
         String parametr = prikazy.parametr(vstup);
         p.vykonej(this, parametr);
     }
@@ -99,22 +97,23 @@ public class Hra {
      */
     private void vypisUvod() {
         System.out.println("==================================");
-        System.out.println(" UTEK Z AZKABANU - textova hra");
+        System.out.println("   UTEK Z AZKABANU textova hra");
         System.out.println("==================================");
-        System.out.println("Cil: najdi 'Rezavy klic' a u hlavni brany pouzij: pouzij rezavy klic");
+        System.out.println("Tvym ukolem je utect z teto straslive veznice.");
+        System.out.println("Proslycha se, ze jedinou cestou ven je HLAVNI BRANA.");
+        System.out.println("Jeji zamek je ale zamceny. Budes k ni potrebovat ten spravny klic...");
         System.out.println();
         System.out.println("Ovlada se to prikazy. Priklady:");
-        System.out.println("  prozkoumej");
-        System.out.println("  jdi chodba cel");
-        System.out.println("  vezmi rezavy klic");
-        System.out.println("  poloz chleba");
-        System.out.println("  inventar");
-        System.out.println("  mluv straz");
-        System.out.println("  pomoc");
-        System.out.println("  konec");
+        System.out.println("- prozkoumej");
+        System.out.println("- jdi chodba cel");
+        System.out.println("- vezmi rezavy klic");
+        System.out.println("- poloz chleba");
+        System.out.println("- inventar");
+        System.out.println("- mluv straz");
+        System.out.println("- pomoc");
+        System.out.println("- konec");
         System.out.println();
-        System.out.println("Tip: Prikazy nejsou citlive na velikost pismen (muze byt i 'JDI ...').");
-        System.out.println("==================================");
+        System.out.println("Tip: Prikazy nejsou citlive na velikost pismen (muze byt i JDI...).");
     }
 
     public Vezeni getVezeni() {

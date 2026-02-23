@@ -11,7 +11,6 @@ public class Prikazy {
 
     /**
      * Zaregistruje prikaz do mapy, aby ho hra umela rozpoznat
-     *
      * @param prikaz Instance prikazu, jako napr. PrikazJdi
      */
     public void zaregistruj(Prikaz prikaz) {
@@ -20,7 +19,6 @@ public class Prikazy {
 
     /**
      * Najde prislusny objekt prikazu podle zadani uzivatele
-     *
      * @param vstup Cely text napsany do konzole
      * @return Objekt prikazu, nebo null, pokud prikaz neexistuje nebo byl zadan spatne
      */
@@ -32,14 +30,12 @@ public class Prikazy {
         if (vstup.isEmpty()) {
             return null;
         }
-
         String[] casti = vstup.split("\\s+", 2);
         return registry.get(casti[0].toLowerCase());
     }
 
     /**
      * Oddeli z uzivatelskeho vstupu samotny parametr
-     *
      * @param vstup Cely zadany text
      * @return Text parametru, nebo prazdny retezec, pokud uzivatel zadny parametr nezadal
      */

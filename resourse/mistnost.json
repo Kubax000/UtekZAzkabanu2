@@ -1,109 +1,108 @@
 {
-  "start": "cela",
+  "start": "cela_vezne",
   "mistnosti": [
     {
-      "id": "cela",
-      "nazev": "Cela vezne",
-      "popis": "Studena kamenna cela, ve ktere se probouzis uprostred noci.",
+      "id": "vez_dozorcu",
+      "nazev": "Vez dozorcu",
+      "popis": "Nejvyssi bod veznice. Fouka tu ledovy vitr a je odsud videt na more. Jedina cesta dolu vede zpet na strazni stanoviste.",
       "vychody": {
-        "chodba cel": "chodba_cel"
+        "Strazni stanoviste": "strazni_stanoviste"
+      },
+      "predmety": [],
+      "postavy": []
+    },
+    {
+      "id": "strazni_stanoviste",
+      "nazev": "Strazni stanoviste",
+      "popis": "Mistnost dozorcu. Na stole jsou zbytky jidla. Muzes jit nahoru na vez nebo dolu do chodby cel.",
+      "vychody": {
+        "Vez dozorcu": "vez_dozorcu",
+        "Chodba cel": "chodba_cel"
       },
       "predmety": [
-        { "nazev": "Stary kus latky", "popis": "Roztrhana latka, muze se hodit.", "prenosny": true }
+        {
+          "nazev": "Chleba",
+          "popis": "Okoralý kus vezenskeho chleba.",
+          "prenosny": true
+        }
       ],
       "postavy": []
     },
     {
       "id": "chodba_cel",
       "nazev": "Chodba cel",
-      "popis": "Dlouha chodba spojujici jednotlive cely veznu.",
+      "popis": "Dlouha chodba. Muzes se vratit do cely, jit na strazni stanoviste nebo do skladu.",
       "vychody": {
-        "cela vezne": "cela",
-        "kuchyne veznu": "kuchyne",
-        "knihovna kouzel": "knihovna",
-        "strazni mistnost": "strazni_mistnost"
+        "Strazni stanoviste": "strazni_stanoviste",
+        "Cela vezne": "cela_vezne",
+        "Sklad predmetu": "sklad_predmetu"
       },
       "predmety": [],
       "postavy": [
-        { "jmeno": "Stary vezen", "popis": "Vycerpany muz v roztrhanych satech.", "dialog": "Psst... ve skladu je pry pacidlo." }
+        {
+          "jmeno": "starec",
+          "popis": "Stary vezen, ktery tu sedi uz roky.",
+          "dialog": "Hledas cestu ven? Musis projit pres knihovnu az k hlavni brane. Ale bez klice ze skladu se nedostanes pres zamek!"
+        }
       ]
     },
     {
-      "id": "kuchyne",
-      "nazev": "Kuchyne veznu",
-      "popis": "Spinava kuchyne s nekolika hrnci a zbytky jidla.",
+      "id": "sklad_predmetu",
+      "nazev": "Sklad predmetu",
+      "popis": "Mistnost plna harampadi. Tady by se mohl nekde valet klic od brany.",
       "vychody": {
-        "chodba cel": "chodba_cel"
+        "Chodba cel": "chodba_cel"
       },
       "predmety": [
-        { "nazev": "Chleba", "popis": "Tvrdy chleba. Nekdo ho bude chtit.", "prenosny": true }
-      ],
-      "postavy": [
-        { "jmeno": "Zradny vezen", "popis": "Tvari se kamaradsky, ale never mu.", "dialog": "Kdyz mi dones chleba, neco ti reknu..." }
-      ]
-    },
-    {
-      "id": "knihovna",
-      "nazev": "Knihovna kouzel",
-      "popis": "Zaprasena mistnost plna starych kouzelnickych svitku.",
-      "vychody": {
-        "chodba cel": "chodba_cel",
-        "magicka laborator": "magicka_laborator"
-      },
-      "predmety": [
-        { "nazev": "Svitok", "popis": "Stary svitek s kouzelnymi runami.", "prenosny": true }
-      ],
-      "postavy": [
-        { "jmeno": "Spravce magie", "popis": "Podezrely spravce, hlida svitky.", "dialog": "Bez svitku nic neotevres." }
-      ]
-    },
-    {
-      "id": "magicka_laborator",
-      "nazev": "Magicka laborator",
-      "popis": "Mistnost s narusenymi runami a zbytky magickeho systemu.",
-      "vychody": {
-        "knihovna kouzel": "knihovna",
-        "sklad predmetu": "sklad"
-      },
-      "predmety": [
-        { "nazev": "Magicky krystal", "popis": "Zari, kdyz je blizko magie.", "prenosny": true }
+        {
+          "nazev": "Rezavy klic",
+          "popis": "Stary tezky klic. Vypada to, ze patri k hlavni brane.",
+          "prenosny": true
+        }
       ],
       "postavy": []
     },
     {
-      "id": "sklad",
-      "nazev": "Sklad zabavenych predmetu",
-      "popis": "Mistnost plna zabavenych nastroju a magickych artefaktu.",
+      "id": "cela_vezne",
+      "nazev": "Cela vezne",
+      "popis": "Tvoje mala vlhka cela. Cesta ven vede do chodby cel, nebo muzes jit hloubeji do knihovny.",
       "vychody": {
-        "magicka laborator": "magicka_laborator"
+        "Chodba cel": "chodba_cel",
+        "Knihovna magie": "knihovna_magie"
       },
-      "predmety": [
-        { "nazev": "Pacidlo", "popis": "Hodi se na vypaceni nebo odemceni.", "prenosny": true },
-        { "nazev": "Rezavy klic", "popis": "Stary klic. Mozna pasuje na branu.", "prenosny": true }
-      ],
+      "predmety": [],
       "postavy": []
     },
     {
-      "id": "strazni_mistnost",
-      "nazev": "Strazni mistnost",
-      "popis": "Mistnost, kde hlida straz Azkabanu.",
+      "id": "knihovna_magie",
+      "nazev": "Knihovna magie",
+      "popis": "Mistnost plna prastarych knih. Citit tu magii. Cesta pokracuje do magickeho uzlu.",
       "vychody": {
-        "chodba cel": "chodba_cel",
-        "hlavni brana": "hlavni_brana"
+        "Cela vezne": "cela_vezne",
+        "Magicky uzel": "magicky_uzel"
       },
       "predmety": [],
-      "postavy": [
-        { "jmeno": "Straz", "popis": "Prisna straz Azkabanu.", "dialog": "Zpatky do cely!" }
-      ]
+      "postavy": []
+    },
+    {
+      "id": "magicky_uzel",
+      "nazev": "Magicky uzel",
+      "popis": "Srdce veznice, kde pulzuje fialova energie. Odtud uz je to jen kousek k brane.",
+      "vychody": {
+        "Knihovna magie": "knihovna_magie",
+        "Hlavni brana": "hlavni_brana"
+      },
+      "predmety": [],
+      "postavy": []
     },
     {
       "id": "hlavni_brana",
-      "nazev": "Hlavni brana Azkabanu",
-      "popis": "Masivni brana predstavujici jedinou cestu ke svobode.",
-      "vychody": {},
-      "predmety": [
-        { "nazev": "Hlavni pecet", "popis": "Pecet, kterou je nutne ziskat pro utek.", "prenosny": false }
-      ],
+      "nazev": "Hlavni brana",
+      "popis": "Obrovska brana na svobodu! Zamek je ale rezavy a pevne drzi. Zkus pouzit ten klic ze skladu.",
+      "vychody": {
+        "Magicky uzel": "magicky_uzel"
+      },
+      "predmety": [],
       "postavy": []
     }
   ]
