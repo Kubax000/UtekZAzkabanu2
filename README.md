@@ -7,7 +7,7 @@ Proslechlo se, že jedinou cestou ven je Hlavní brána. Její zámek je ale zam
 
 
 ## Spuštění
-java -jar UtekZAzkabanu.jar
+java -jar .\jackson-demo.jar
 - vyzaduje Java 17 nebo novejsi
 
 
