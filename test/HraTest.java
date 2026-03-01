@@ -105,14 +105,14 @@ public class HraTest {
     }
 
     /**
-     * Testuje vyhru hry.
+     * Testuje vyhru hry pouzitim hlavni pecete na brane.
      */
     @Test
-    void testVyhraPouzitimKliceNaBrane() {
+    void testVyhraPouzitimPecetiNaBrane() {
         FakeHra hra = new FakeHra();
         PrikazPouzij prikaz = new PrikazPouzij();
 
-        prikaz.vykonej(hra, "Rezavy klic");
+        prikaz.vykonej(hra, "Hlavni pecet");
 
         assertTrue(hra.vyhraNastavena);
     }
@@ -127,12 +127,12 @@ public class HraTest {
 
         FakeHra() {
             v = new Vezeni();
-            Mistnost brana = new Mistnost("hlavni_brana", "Hlavni brana Azkabanu", "popis", "pouzij klic");
+            Mistnost brana = new Mistnost("hlavni_brana", "Hlavni brana", "popis", "pouzij pecet");
             v.pridejMistnost(brana);
             v.setStartovniMistnost(brana);
 
             h = new Hrac(brana);
-            h.getInventar().pridejPredmet(new Predmet("Rezavy klic", "x", true));
+            h.getInventar().pridejPredmet(new Predmet("Hlavni pecet", "x", true));
         }
 
         @Override

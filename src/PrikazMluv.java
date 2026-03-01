@@ -18,6 +18,18 @@ public class PrikazMluv implements Prikaz {
             return;
         }
 
+        if (parametr.trim().toLowerCase().equals("straz")) {
+            System.out.println(p.getJmeno() + ": " + p.getPopis());
+            System.out.println("Se strazi neni mozne vest normalni rozhovor.");
+            return;
+        }
+
+        if (parametr.trim().toLowerCase().equals("spravce magie")) {
+            p.mluv(hra);
+            hra.getStav().nastavSpravcePomohl();
+            return;
+        }
+
         p.mluv(hra);
     }
 

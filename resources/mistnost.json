@@ -4,37 +4,46 @@
     {
       "id": "vez_dozorcu",
       "nazev": "Vez dozorcu",
-      "popis": "Nejvyssi bod veznice. Fouka tu ledovy vitr a je odsud videt na more. Jedina cesta dolu vede zpet na strazni stanoviste.",
-      "napoveda": "Tady nic víc nenajdeš. Pokochej se výhledem a jdi zpět dolů na strážní stanoviště.",
+      "popis": "Vyhlidkova vez dozorcu. Odtud je vyhled na cely veznice.",
+      "napoveda": "Prohledej vez. Neco tu mozna lezi.",
       "vychody": {
         "Strazni stanoviste": "strazni_stanoviste"
       },
-      "predmety": [],
-      "postavy": []
+      "predmety": [
+        { "nazev": "Rezavy klic", "popis": "Stary rezavy klic. Dozorce ho tu nechal.", "prenosny": true }
+      ],
+      "postavy": [
+        {
+          "jmeno": "straz",
+          "popis": "Ozbrojena straz Azkabanu."
+        }
+      ]
     },
     {
       "id": "strazni_stanoviste",
       "nazev": "Strazni stanoviste",
-      "popis": "Mistnost dozorcu. Na stole jsou zbytky jidla. Muzes jit nahoru na vez nebo dolu do chodby cel.",
-      "napoveda": "Pořádně to tu prohledej. Dozorci tu občas nechávají jídlo, které by se ti v batohu mohlo hodit.",
+      "popis": "Mistnost dozorcu. Na stole jsou zbytky jidla.",
+      "napoveda": "Prohledej mistnost. Ale pozor, straz tu obchazi.",
       "vychody": {
         "Vez dozorcu": "vez_dozorcu",
         "Chodba cel": "chodba_cel"
       },
       "predmety": [
-        {
-          "nazev": "Chleba",
-          "popis": "Okoralý kus vezenskeho chleba.",
-          "prenosny": true
-        }
+        { "nazev": "Chleba", "popis": "Okuraly kus vezenskeho chleba.", "prenosny": true }
       ],
-      "postavy": []
+      "postavy": [
+        {
+          "jmeno": "zradny vezen",
+          "popis": "Vezen s uslesnymi ocima. Tvari se pratels ky, ale neco na nem nesedi.",
+          "dialog": "Psst! Kamarade, vim o zkratce. Jdi rovnou na vez dozorcu, tam najdes vsechno co potrebujes. Straz tam ted nestoji... nebo snad ano? Hehe."
+        }
+      ]
     },
     {
       "id": "chodba_cel",
       "nazev": "Chodba cel",
-      "popis": "Dlouha chodba. Muzes se vratit do cely, jit na strazni stanoviste nebo do skladu.",
-      "napoveda": "Promluv si s tím starcem, co tu sedí. Vypadá, že o Azkabanu ví všechno.",
+      "popis": "Dlouha chodba. Muzes jit nahoru na strazni stanoviste, dolu do cely nebo do skladu.",
+      "napoveda": "Promluv se starym veznem. Vi o veznici vse.",
       "vychody": {
         "Strazni stanoviste": "strazni_stanoviste",
         "Cela vezne": "cela_vezne",
@@ -43,75 +52,88 @@
       "predmety": [],
       "postavy": [
         {
-          "jmeno": "starec",
-          "popis": "Stary vezen, ktery tu sedi uz roky.",
-          "dialog": "Hledas cestu ven? Musis projit pres knihovnu az k hlavni brane. Ale bez klice ze skladu se nedostanes pres zamek!"
+          "jmeno": "stary vezen",
+          "popis": "Stary unaveny vezen. Ma laskavy pohled.",
+          "dialog": "Poslechni me. Ceka te dlouha cesta:\n  1) Jdi az na vez dozorcu - tam najdes rezavy klic\n  2) Klic otevre sklad v chodbě, tam je pacidlo\n  3) V cele lezi svitek - precti ho\n  4) V knihovne najdes magicky krystal\n  5) Najdi spravce magie v magickem uzlu\n  Jen on vi jak krystal spravne pouzit."
         }
       ]
     },
     {
       "id": "sklad_predmetu",
       "nazev": "Sklad predmetu",
-      "popis": "Mistnost plna harampadi. Tady by se mohl nekde valet klic od brany.",
-      "napoveda": "Někde mezi tím bordelem musí být klíč. Zkus příkaz 'vezmi Rezavy klic'.",
+      "popis": "Mistnost plna harampadi. Nekde tu musi byt neco uzitecneho.",
+      "napoveda": "Potrebujes rezavy klic abys se sem dostal. Prohledej kazdy koutek.",
       "vychody": {
         "Chodba cel": "chodba_cel"
       },
       "predmety": [
-        {
-          "nazev": "Rezavy klic",
-          "popis": "Stary tezky klic. Vypada to, ze patri k hlavni brane.",
-          "prenosny": true
-        }
+        { "nazev": "Pacidlo", "popis": "Kovove pacidlo na zablokovane dvere.", "prenosny": true }
       ],
       "postavy": []
     },
     {
       "id": "cela_vezne",
       "nazev": "Cela vezne",
-      "popis": "Tvoje mala vlhka cela. Cesta ven vede do chodby cel, nebo muzes jit hloubeji do knihovny.",
-      "napoveda": "Tady začíná tvá cesta. Pokud chceš utéct, vydej se buď do chodby, nebo zkus najít tajný průchod do knihovny.",
+      "popis": "Tvoja mala vlhka cela. Startovni bod tve cesty.",
+      "napoveda": "Precti svitek a pak se vydej do chodby za starym veznem.",
       "vychody": {
         "Chodba cel": "chodba_cel",
         "Knihovna magie": "knihovna_magie"
       },
-      "predmety": [],
+      "predmety": [
+        { "nazev": "Stary svitek", "popis": "Potrhaný svitek s informacemi o ochrane brany.", "prenosny": true }
+      ],
       "postavy": []
     },
     {
       "id": "knihovna_magie",
       "nazev": "Knihovna magie",
-      "popis": "Mistnost plna prastarych knih. Citit tu magii. Cesta pokracuje do magickeho uzlu.",
-      "napoveda": "Knihy jsou sice zajímavé, ale ty musíš dál. Pokračuj směrem k magickému uzlu.",
+      "popis": "Mistnost plna prastarych knih. Citit tu silnou magii.",
+      "napoveda": "Vezmi magicky krystal. Pak jdi za spravcem magie do magickeho uzlu.",
       "vychody": {
         "Cela vezne": "cela_vezne",
         "Magicky uzel": "magicky_uzel"
       },
-      "predmety": [],
+      "predmety": [
+        { "nazev": "Magicky krystal", "popis": "Krystal pulzujici magickou energii.", "prenosny": true }
+      ],
       "postavy": []
     },
     {
       "id": "magicky_uzel",
       "nazev": "Magicky uzel",
-      "popis": "Srdce veznice, kde pulzuje fialova energie. Odtud uz je to jen kousek k brane.",
-      "napoveda": "Energie je tu silná. Jdi přímo k hlavní bráně, svoboda je na dosah!",
+      "popis": "Srdce veznice kde pulzuje fialova energie. Vidis masivni dvere k brane.",
+      "napoveda": "Promluv se spravcem magie. Pak pouzij magicky krystal pro deaktivaci bariery a pacidlo na dvere.",
       "vychody": {
         "Knihovna magie": "knihovna_magie",
         "Hlavni brana": "hlavni_brana"
       },
-      "predmety": [],
-      "postavy": []
+      "predmety": [
+        { "nazev": "Hlavni pecet", "popis": "Velka magicka pecet strazcu Azkabanu.", "prenosny": true }
+      ],
+      "postavy": [
+        {
+          "jmeno": "spravce magie",
+          "popis": "Stary muz v poskozenem rouchu. Zkuma magicke uzly.",
+          "dialog": "Pozorne poslouchej:\n  - Tento uzel drzi ochrannou barieru hlavni brany\n  - Jedine magicky krystal z knihovny ji muze zrusit\n  - Pouzij krystal tady, v magickem uzlu\n  - Pak najdes pecet a muzes jit k brane\n  Spech - straz se brzy vrati!"
+        }
+      ]
     },
     {
       "id": "hlavni_brana",
       "nazev": "Hlavni brana",
-      "popis": "Obrovska brana na svobodu! Zamek je ale rezavy a pevne drzi. Zkus pouzit ten klic ze skladu.",
-      "napoveda": "Tady tvá cesta končí. Otevři bránu pomocí klíče (příkaz 'pouzij Rezavy klic').",
+      "popis": "Mohutna brana Azkabanu. Toto je tvoje jedina cesta ven.",
+      "napoveda": "Pouzij hlavni pecet na brane.",
       "vychody": {
         "Magicky uzel": "magicky_uzel"
       },
       "predmety": [],
-      "postavy": []
+      "postavy": [
+        {
+          "jmeno": "straz",
+          "popis": "Silna straz hlida branu."
+        }
+      ]
     }
   ]
 }

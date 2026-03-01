@@ -29,7 +29,8 @@ public class Hra {
             String vstup = scanner.nextLine();
             spustPrikazZeVstupu(vstup);
             if (stav.jeVyhra()) {
-                System.out.println(" Vyhral jsi. Utekl jsi z Azkabanu. ");
+                System.out.println("GRATULUJEME! Pouzil jsi Hlavni pecet a brana Azkabanu se otevřela.");
+                System.out.println("Utekl jsi z nejstrzenejsi veznice kouzelnickeho sveta. Svoboda!");
                 bezi = false;
             }
         }
@@ -102,19 +103,20 @@ public class Hra {
         System.out.println("   UTEK Z AZKABANU textova hra");
         System.out.println("==================================");
         System.out.println("Tvym ukolem je utect z teto straslive veznice.");
-        System.out.println("Proslycha se, ze jedinou cestou ven je HLAVNI BRANA.");
-        System.out.println("Jeji zamek je ale zamceny. Budes k ni potrebovat ten spravny klic...");
+        System.out.println("Jedinou cestou ven je HLAVNI BRANA.");
+        System.out.println("K jejimu otevreni budes potrebovat Hlavni pecet...");
         System.out.println();
         System.out.println("Ovlada se to prikazy. Priklady:");
         System.out.println("- prozkoumej");
         System.out.println("- jdi chodba cel");
-        System.out.println("- vezmi rezavy klic");
-        System.out.println("- poloz chleba");
+        System.out.println("- vezmi magicky krystal");
+        System.out.println("- pouzij pacidlo");
+        System.out.println("- poloz pacidlo");
+        System.out.println("- mluv starec");
         System.out.println("- inventar");
-        System.out.println("- mluv straz");
         System.out.println("- pomoc");
-        System.out.println("- konec");
         System.out.println("- napoveda");
+        System.out.println("- konec");
         System.out.println();
         System.out.println("Tip: Prikazy nejsou citlive na velikost pismen (muze byt i JDI...).");
     }
@@ -129,6 +131,10 @@ public class Hra {
 
     public Prikazy getPrikazy() {
         return prikazy;
+    }
+
+    public StavHry getStav() {
+        return stav;
     }
 
     /**

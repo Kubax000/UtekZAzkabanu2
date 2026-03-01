@@ -110,6 +110,10 @@ public class Mistnost {
         return postavy.get(jmeno.toLowerCase().trim());
     }
 
+    public void odeberPostavu(String jmeno) {
+        postavy.remove(jmeno.toLowerCase().trim());
+    }
+
     public Collection<Postava> getPostavy() {
         return postavy.values();
     }
