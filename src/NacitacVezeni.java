@@ -38,8 +38,6 @@ public class NacitacVezeni {
             }
         }
 
-        vezeni.setStartovniMistnost(vezeni.najdiMistnost(cfg.getStart()));
-
         for (NastaveniMistnosti nm : cfg.getMistnosti()) {
             Mistnost m = vezeni.najdiMistnost(nm.getId());
 
