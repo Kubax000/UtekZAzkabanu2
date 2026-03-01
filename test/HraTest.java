@@ -1,13 +1,11 @@
 import org.junit.jupiter.api.Test;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Testy pro overeni hlavni logiky hry
- *  @author Jakub Eliasek
+ * @author Jakub Eliasek
  */
 public class HraTest {
     /**
@@ -15,8 +13,8 @@ public class HraTest {
      */
     @Test
     void testMistnostSousedi() {
-        Mistnost a = new Mistnost("a", "A", "x");
-        Mistnost b = new Mistnost("b", "B", "x");
+        Mistnost a = new Mistnost("a", "A", "popis a", "napoveda a");
+        Mistnost b = new Mistnost("b", "B", "popis b", "napoveda b");
         a.pridejSouseda(b);
 
         assertNotNull(a.dejSouseda("B"));
@@ -28,8 +26,8 @@ public class HraTest {
      */
     @Test
     void testHracPohybJenNaSouseda() {
-        Mistnost cela = new Mistnost("cela", "Cela", "x");
-        Mistnost chodba = new Mistnost("chodba", "Chodba", "x");
+        Mistnost cela = new Mistnost("cela", "Cela", "x", "napoveda");
+        Mistnost chodba = new Mistnost("chodba", "Chodba", "x", "napoveda");
         cela.pridejSouseda(chodba);
 
         Hrac h = new Hrac(cela);
@@ -57,7 +55,7 @@ public class HraTest {
      */
     @Test
     void testPredmetVMistnostiPridatOdebrat() {
-        Mistnost m = new Mistnost("m", "M", "x");
+        Mistnost m = new Mistnost("m", "M", "x", "napoveda");
 
         m.pridejPredmet(new Predmet("Klic", "x", true));
         assertNotNull(m.najdiPredmet("Klic"));
@@ -89,8 +87,8 @@ public class HraTest {
             {
               "start": "a",
               "mistnosti": [
-                { "id": "a", "nazev": "A", "popis": "x", "vychody": { "B": "b" }, "predmety": [], "postavy": [] },
-                { "id": "b", "nazev": "B", "popis": "x", "vychody": {}, "predmety": [], "postavy": [] }
+                { "id": "a", "nazev": "A", "popis": "x", "napoveda": "rada a", "vychody": { "B": "b" }, "predmety": [], "postavy": [] },
+                { "id": "b", "nazev": "B", "popis": "x", "napoveda": "rada b", "vychody": {}, "predmety": [], "postavy": [] }
               ]
             }
             """;
@@ -107,7 +105,7 @@ public class HraTest {
     }
 
     /**
-     * Testuje vyhru hry. Diky FakeHra testuje ze hrac ma spravny klic a odemika branu.
+     * Testuje vyhru hry.
      */
     @Test
     void testVyhraPouzitimKliceNaBrane() {
@@ -120,17 +118,16 @@ public class HraTest {
     }
 
     /**
-     * Pomocna trida, slouzi pro ucely testovani a pomaha nam simulovat vytezstvi ve hre
+     * Pomocna trida pro testovani
      */
     static class FakeHra extends Hra {
         boolean vyhraNastavena = false;
-
         private final Vezeni v;
         private final Hrac h;
 
         FakeHra() {
             v = new Vezeni();
-            Mistnost brana = new Mistnost("hlavni_brana", "Hlavni brana Azkabanu", "x");
+            Mistnost brana = new Mistnost("hlavni_brana", "Hlavni brana Azkabanu", "popis", "pouzij klic");
             v.pridejMistnost(brana);
             v.setStartovniMistnost(brana);
 
@@ -139,18 +136,12 @@ public class HraTest {
         }
 
         @Override
-        public Vezeni getVezeni() {
-            return v;
-        }
+        public Vezeni getVezeni() { return v; }
 
         @Override
-        public Hrac getHrac() {
-            return h;
-        }
+        public Hrac getHrac() { return h; }
 
         @Override
-        public void nastavVyhru() {
-            vyhraNastavena = true;
-        }
+        public void nastavVyhru() { vyhraNastavena = true; }
     }
 }

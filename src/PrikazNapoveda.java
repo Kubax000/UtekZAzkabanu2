@@ -1,5 +1,6 @@
 /**
  * Implemetace prikazu napoveda. Vypise napovedu pro danou mistnost.
+ * @author Jakub Eliasek
  */
 public class PrikazNapoveda implements Prikaz {
 
