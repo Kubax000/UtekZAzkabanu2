@@ -21,7 +21,7 @@ public class NacitacVezeni {
         Vezeni vezeni = new Vezeni();
 
         for (NastaveniMistnosti nm : cfg.getMistnosti()) {
-            Mistnost m = new Mistnost(nm.getId(), nm.getNazev(), nm.getPopis());
+            Mistnost m = new Mistnost(nm.getId(), nm.getNazev(), nm.getPopis(), nm.getNapoveda());
             vezeni.pridejMistnost(m);
         }
 

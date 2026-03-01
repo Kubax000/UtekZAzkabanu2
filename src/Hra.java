@@ -53,6 +53,7 @@ public class Hra {
         prikazy.zaregistruj(new PrikazPouzij());
         prikazy.zaregistruj(new PrikazMluv());
         prikazy.zaregistruj(new PrikazPomoc());
+        prikazy.zaregistruj(new PrikazNapoveda());
         prikazy.zaregistruj(new PrikazKonec());
     }
 
@@ -113,6 +114,7 @@ public class Hra {
         System.out.println("- mluv straz");
         System.out.println("- pomoc");
         System.out.println("- konec");
+        System.out.println("- napoveda");
         System.out.println();
         System.out.println("Tip: Prikazy nejsou citlive na velikost pismen (muze byt i JDI...).");
     }

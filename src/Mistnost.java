@@ -13,6 +13,7 @@ public class Mistnost {
     private final String id;
     private final String nazev;
     private final String popis;
+    private final String napoveda;
     private Map<String, Mistnost> sousedniMistnosti = new HashMap<>();
     private final Map<String, Predmet> predmety = new HashMap<>();
     private final Map<String, Postava> postavy = new HashMap<>();
@@ -23,10 +24,11 @@ public class Mistnost {
      * @param nazev Lepsi nazev pro hrace.
      * @param popis Text co hrac vidi
      */
-    public Mistnost(String id, String nazev, String popis) {
+    public Mistnost(String id, String nazev, String popis, String napoveda) {
         this.id = id;
         this.nazev = nazev;
         this.popis = popis;
+        this.napoveda = napoveda;
     }
 
     public String getId() {
@@ -110,5 +112,9 @@ public class Mistnost {
 
     public Collection<Postava> getPostavy() {
         return postavy.values();
+    }
+
+    public String getNapoveda() {
+        return napoveda;
     }
 }

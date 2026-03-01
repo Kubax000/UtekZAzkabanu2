@@ -5,6 +5,7 @@
       "id": "vez_dozorcu",
       "nazev": "Vez dozorcu",
       "popis": "Nejvyssi bod veznice. Fouka tu ledovy vitr a je odsud videt na more. Jedina cesta dolu vede zpet na strazni stanoviste.",
+      "napoveda": "Tady nic víc nenajdeš. Pokochej se výhledem a jdi zpět dolů na strážní stanoviště.",
       "vychody": {
         "Strazni stanoviste": "strazni_stanoviste"
       },
@@ -15,6 +16,7 @@
       "id": "strazni_stanoviste",
       "nazev": "Strazni stanoviste",
       "popis": "Mistnost dozorcu. Na stole jsou zbytky jidla. Muzes jit nahoru na vez nebo dolu do chodby cel.",
+      "napoveda": "Pořádně to tu prohledej. Dozorci tu občas nechávají jídlo, které by se ti v batohu mohlo hodit.",
       "vychody": {
         "Vez dozorcu": "vez_dozorcu",
         "Chodba cel": "chodba_cel"
@@ -32,6 +34,7 @@
       "id": "chodba_cel",
       "nazev": "Chodba cel",
       "popis": "Dlouha chodba. Muzes se vratit do cely, jit na strazni stanoviste nebo do skladu.",
+      "napoveda": "Promluv si s tím starcem, co tu sedí. Vypadá, že o Azkabanu ví všechno.",
       "vychody": {
         "Strazni stanoviste": "strazni_stanoviste",
         "Cela vezne": "cela_vezne",
@@ -50,6 +53,7 @@
       "id": "sklad_predmetu",
       "nazev": "Sklad predmetu",
       "popis": "Mistnost plna harampadi. Tady by se mohl nekde valet klic od brany.",
+      "napoveda": "Někde mezi tím bordelem musí být klíč. Zkus příkaz 'vezmi Rezavy klic'.",
       "vychody": {
         "Chodba cel": "chodba_cel"
       },
@@ -66,6 +70,7 @@
       "id": "cela_vezne",
       "nazev": "Cela vezne",
       "popis": "Tvoje mala vlhka cela. Cesta ven vede do chodby cel, nebo muzes jit hloubeji do knihovny.",
+      "napoveda": "Tady začíná tvá cesta. Pokud chceš utéct, vydej se buď do chodby, nebo zkus najít tajný průchod do knihovny.",
       "vychody": {
         "Chodba cel": "chodba_cel",
         "Knihovna magie": "knihovna_magie"
@@ -77,6 +82,7 @@
       "id": "knihovna_magie",
       "nazev": "Knihovna magie",
       "popis": "Mistnost plna prastarych knih. Citit tu magii. Cesta pokracuje do magickeho uzlu.",
+      "napoveda": "Knihy jsou sice zajímavé, ale ty musíš dál. Pokračuj směrem k magickému uzlu.",
       "vychody": {
         "Cela vezne": "cela_vezne",
         "Magicky uzel": "magicky_uzel"
@@ -88,6 +94,7 @@
       "id": "magicky_uzel",
       "nazev": "Magicky uzel",
       "popis": "Srdce veznice, kde pulzuje fialova energie. Odtud uz je to jen kousek k brane.",
+      "napoveda": "Energie je tu silná. Jdi přímo k hlavní bráně, svoboda je na dosah!",
       "vychody": {
         "Knihovna magie": "knihovna_magie",
         "Hlavni brana": "hlavni_brana"
@@ -99,6 +106,7 @@
       "id": "hlavni_brana",
       "nazev": "Hlavni brana",
       "popis": "Obrovska brana na svobodu! Zamek je ale rezavy a pevne drzi. Zkus pouzit ten klic ze skladu.",
+      "napoveda": "Tady tvá cesta končí. Otevři bránu pomocí klíče (příkaz 'pouzij Rezavy klic').",
       "vychody": {
         "Magicky uzel": "magicky_uzel"
       },

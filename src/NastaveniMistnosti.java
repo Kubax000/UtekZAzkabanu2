@@ -9,6 +9,7 @@ public class NastaveniMistnosti {
     private String id;
     private String nazev;
     private String popis;
+    private String napoveda;
     private Map<String, String> vychody;
     private List<NastaveniPredmetu> predmety;
     private List<NastaveniPostavy> postavy;
@@ -36,6 +37,13 @@ public class NastaveniMistnosti {
     }
     public void setPopis(String popis) {
         this.popis = popis;
+    }
+
+    public String getNapoveda() {
+        return napoveda;
+    }
+    public void setNapoveda(String napoveda) {
+        this.napoveda = napoveda;
     }
 
     public Map<String, String> getVychody() {
